@@ -1,0 +1,476 @@
+/* Text alignment */
+.text-left {
+    text-align: left;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Consent screen styles */
+.consent-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Calibri, sans-serif;
+}
+
+/* Participant info screen styles */
+.form-container {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+input, .form-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin: 5px 0 20px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    padding: 15px;
+}
+
+/* Experiment screen styles */
+.experiment-container {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.remaining-stars {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.draggable-star {
+    display: inline-block;
+    margin: 5px;
+    cursor: move;
+}
+
+/* Extra button styling */
+.skip-button {
+    position: fixed;
+    bottom: 20px;  
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999; 
+}
+
+.skip-button:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+.exit-button {
+    position: fixed;
+    bottom: 20px;  
+    left: 90%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999; 
+}
+
+.exit-button:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+.continue-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+.continue-button:hover {
+    background-color: #45a049;
+}
+
+/* "Why?" container, fixed near bottom of screen */
+.why-section {
+    position: fixed;
+    bottom: 80px; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Basic styling */
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    /* Shadow for some depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;  
+    
+    /* Padding around the label, textarea, button */
+    padding: 8px;
+  }
+  
+  /* Label styling */
+  .why-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Textarea styling */
+  .why-textarea {
+    display: block;
+    width: 100%;
+    min-height: 40px; /* Adjust this to make it shorter */
+    height: auto; /* Ensures it grows if needed */
+    font-family: inherit;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 8px; 
+    resize: vertical;  /* let user expand vertically if they want */
+  }
+  
+  /* Submit button styling */
+  .why-submit {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .why-submit:hover {
+    background-color: #45a049;
+  }
+
+/* Star Styles */
+.star {
+    display: inline-block;
+    margin: 0;
+    color: #ffeb3b;
+}
+
+.star.extrasmall {
+    font-size: 15px;
+}
+
+.star.small {
+    font-size: 25px;
+}
+
+.star.medium {
+    font-size: 45px;
+}
+
+.star.large {
+    font-size: 60px;
+}
+
+/* Star Animations */
+@keyframes fadeOut {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(10px); opacity: 0.7; }
+    100% { transform: translateY(30px); opacity: 0; }
+}
+
+.star.fade-out {
+    animation: fadeOut 0.6s forwards;
+    pointer-events: none;
+}
+
+/* Outcomes Container */
+.outcomes-container {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    position: relative;  
+    margin-bottom: 200px; 
+}
+
+.outcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.outcome span {
+    margin-top: 5px;
+    font-size: 30px;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Machine Styles */
+.machines-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.machine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.machine {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid;
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.blue-machine {
+    background-color: #cce5ff;
+    border-color: #004085;
+}
+
+.green-machine {
+    background-color: #d4edda;
+    border-color: #155724;
+}
+
+.purple-machine {
+    background-color: #f3e8ff;
+    border-color: #6f42c1;
+}
+
+/* Slots container & styles */
+.machine .slots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.slot button {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 2px solid grey;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Exaggerated Slot Sizes */
+.slot.extrasmall {
+    width: 60px;
+    height: 40px;
+}
+
+.slot.extrasmallColored {
+    width: 35px;
+    height: 25px;
+    background-color: rgb(191, 191, 191); /* Temporary for visibility */
+    border: 2px solid rgb(72, 72, 72);  /* Optional: Adds a border for easier debugging */
+}
+
+.slot.small {
+    width: 80px;
+    height: 60px;
+}
+
+.slot.medium {
+    width: 120px;
+    height: 90px;
+}
+
+.slot.large {
+    width: 160px;
+    height: 120px;
+}
+
+/* Hover effect */
+.slot.hover {
+    border-color: #ffeb3b;
+}
+
+.slot.hover-enlarge {
+    transform: scale(1.2); /* Adjust scale as desired */
+    transition: transform 0.2s ease;
+}
+
+/* Machine-specific button styles */
+.blue-machine button {
+    background-color: rgba(26, 76, 168, 0.2);
+    border: 2px solid rgba(47, 96, 186, 0.8);
+    color: #003366;
+}
+
+.green-machine button {
+    background-color: rgba(26, 116, 26, 0.2);
+    border: 2px solid rgba(55, 145, 55, 0.8);
+    color: #006400;
+}
+
+.purple-machine button {
+    background-color: rgba(142, 31, 142, 0.2);
+    border: 2px solid rgba(156, 58, 156, 0.8);
+    color: #800080;
+}
+
+/* Question Phase */
+.is-question-phase .slot button {
+    pointer-events: none; /* Keep slot buttons unclickable */
+}
+
+.is-question-phase .machine {
+    pointer-events: auto;
+    cursor: pointer;  /* Ensure machines --> clickable */
+}
+
+/* Lightbulb Styles */
+.lightbulb-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.lightbulb-label {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.lightbulb1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background: url("../imgs/lightbulb1.png") no-repeat center / contain;
+}
+
+.lightbulb2 {
+    display: inline-block;
+    margin: 0;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background: url("../imgs/lightbulb2.png") no-repeat center / contain;
+}
+
+.lightbulb3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background: url("../imgs/lightbulb3.png") no-repeat center / contain;
+}
+
+.lightbulb4 {
+    display: inline-block;
+    margin: 0;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background: url("../imgs/lightbulb4.png") no-repeat center / contain;
+}
+
+.highlight-circle {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+/* Arrow Styles */
+
+.arrow {
+    display: inline-block;
+    font-size: 30px;
+    color: #333;
+    margin: 0 8px;
+}
+
+/* Fake Cursor Styles */
+
+.fake-cursor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+.fake-cursor-pointer {
+    width: 45px;
+    height: 45px;
+    background-image: url("../imgs/cursor.png");
+    background-repeat: no-repeat;
+    background-size: 19px 27px;
+    background-position: 13px 16px;
+}
+
+.fake-cursor-star {
+    background: none;
+}

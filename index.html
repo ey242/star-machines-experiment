@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Experiment</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Consent Screen -->
+    <div id="consent" class="screen">
+        <div class="consent-container">
+            <h1>Welcome</h1>
+            <ul class="text-left">
+                <li>In this game, you will get to play with different star machines however you want.</li>
+                <li>After that, we will ask you some questions about the machines.</li>
+                <li>At the end of the game, you will get a sticker.</li>
+                <li>Are you ready to play?</li>
+            </ul>
+            <br>
+            <br>
+            <h2>Child's Assent</h2>
+            <p class="text-left">By clicking "I Agree to Participate" below, the child indicates that they are ready to participate in the study.</p>
+            <div class="button-group">
+                <button data-screen="decline">I Decline</button>
+                <button data-screen="participant-info">I Agree to Participate</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Participant Info Screen -->
+    <div id="participant-info" class="screen" hidden>
+        <div style="text-align: center;">
+            <h2>Participant Information</h2>
+        </div>        
+        <div class="form-container">
+            <p><strong>Participant ID</strong></p>
+            <input type="text" name="prolificId" class="form-input" placeholder="Enter Participant ID" required>
+            
+            <p><strong>Age</strong></p>
+            <input type="number" name="age" class="form-input" placeholder="Enter number in years" required>
+            
+            <p><strong>Sex</strong></p>
+            <input type="text" name="sex" class="form-input" placeholder="Enter F or M" required>
+            
+            <button data-screen="experiment">Submit and Start Experiment</button>
+        </div>
+    </div>
+
+    <!-- Experiment Screen -->
+    <div id="experiment" class="screen" hidden>
+        <div class="fake-cursor" id="fake-cursor" style="visibility: hidden;"></div>
+        <div class="experiment-container">
+            <br>
+            <audio id="ttsAudio" style="display:none"></audio>
+            <div id="top-outcomes-container" style="display: flex; justify-content: center; margin-bottom: 20px; margin-top: 20px;">
+                <!-- Top outcomes container will be generated dynamically by startComprehensionQuestions() -->
+            </div>
+            
+            <div class="remaining-stars" id="instruction-text">
+                You are an elf in a star factory. The star factory has three machines. Each machine has three slots that make stars bigger or smaller.<br>
+                You will now watch the stars go into the different slots. Notice what happens to the stars.
+            </div>
+            <div class="remaining-stars" id="playing-text" style="display:none;">You have 27 stars. You can play with these machines and put stars into any slot you want.</div>
+            <div class="remaining-stars" id="finish-text" style="display:none">If you are done playing, let me know.</div>
+            
+            <br>
+            <div class="remaining-stars" id="drag-instruction">Stars left: <span id="remainingStars">27</span></div>
+    
+            <div class="draggable-star" draggable="true" id="star">
+                <span class="star medium">★</span>
+            </div>
+
+            <div class="machines-container" id="machines-container">
+                <!-- Machines will be generated dynamically by renderMachines() -->
+            </div>
+
+            <!-- "Why?" Box -->
+            <div id="why-section" class="why-section" style="display: none;">
+                <!-- <label for="whyText" class="why-label">Why?</label>-->
+                <textarea 
+                id="whyText" 
+                class="why-textarea"
+                placeholder="Optionally: Tell us why here..."
+                ></textarea>
+                <button id="whySubmit" class="why-submit">Submit</button>
+            </div>
+
+            <br>
+            <div class="button-container">
+                <button id="exit-button" class="exit-button" style="display:none;">Exit Program</button>
+                <button id="continue-button" class="continue-button" style="display:none;">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Screen -->
+    <div id="thank-you" style="text-align: center; padding: 50px;" hidden>
+        <h2>Well done! You have been a great elf!</h2>
+        <p>Experimenter: Please do not close the window immediately and wait for at least 3 minutes for data to be uploaded.</p>
+    </div>
+</body>
+<script src="scripts/app.js"></script>
+</html>
