@@ -11,7 +11,11 @@ in press at CogSci2025
 <div align="center">
     <img src="imgs/themachines.png" height="50%" width="50%">
 </div>
-<br>
+In this study, participants are presented with three machines, each differing in the controllability and variability of their outputs.
+(a) The purely controllable machine produces a single, deterministic output across all slots.
+(b) The controllable and variable machine yields three distinct outputs, each reliably tied to slot size.
+(c) The purely variable machine generates three different outputs in a fully stochastic manner, with no predictable pattern.
+Participants are then asked to generalize and design a novel causal intervention using any slot from any machine of their choice.
 
 ## Running the Experiment
 
