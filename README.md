@@ -9,7 +9,7 @@ in press at CogSci2025
 
 
 <div align="center">
-    <img src="public/OVB.png" height="50%" width="50%">
+    <img src="imgs/themachines.png" height="50%" width="50%">
 </div>
 <br>
 
