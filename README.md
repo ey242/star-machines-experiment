@@ -19,4 +19,4 @@ Participants are then asked to generalize and design a novel causal intervention
 
 ## Running the Experiment
 
-To run the experiment, launch `index.html` on an Internet browser. All relevant stimuli to the experiment are included in the `public` folder.
+To run the experiment, launch `index.html` on an Internet browser.
